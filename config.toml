@@ -1,4 +1,4 @@
-baseURL = "https://gokarna-hugo.netlify.app"
+baseURL = "https://gottajsx.netlify.app"
 title = "Gokarna"
 theme = "gokarna"
 languageCode = "en"
