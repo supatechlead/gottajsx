@@ -1,6 +1,6 @@
 ---
 title: "Zustand State Management"
-date: 2024-01-04T07:41:05+01:00
+date: 2024-01-05T07:41:05+01:00
 type: "post"
 draft: false 
 description: "A simple and Modern State Management for React"
