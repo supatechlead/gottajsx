@@ -1,6 +1,6 @@
 baseURL = "https://gottajsx.netlify.app"
 title = "Gokarna"
-theme = "Gokarna-fork"
+theme = "gokarna-fork"
 languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
