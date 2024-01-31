@@ -5,6 +5,7 @@ title : "Push a Docker Image to DockerHub"
 description : "A Guide for Pushing Docker Image to DockerHub"
 tags : ["DockerHub"]
 tableOfContents : true
+type: "post"
 ---
 
 ## Create a Repository on DockerHub

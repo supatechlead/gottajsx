@@ -5,6 +5,7 @@ title : "MySQL in Docker"
 description : "Start using MySQL inside a Docker Container"
 tags : ["Docker", "MySQL"]
 tableOfContents : true
+type: "post"
 ---
 
 Using MySQL in a Docker container can be beneficial for portability, ease of deployment, and resource efficiency. Here is a step by step guide for starting MySQL dockerization.

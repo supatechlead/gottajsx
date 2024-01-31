@@ -5,6 +5,7 @@ title : "Nginx Reverse Proxy for Multiple React Apps"
 description : "How to Dockerize Multiple React Apps on the Same Server"
 tags : ["Docker", "React", "Nginx", "Reverse Proxy"]
 tableOfContents : true
+type: "post"
 ---
 
 To set up a Docker container with Nginx as a reverse proxy for multiple React.js application containers on the same server, follow these steps:

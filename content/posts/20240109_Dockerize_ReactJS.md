@@ -5,6 +5,7 @@ title : "Dockerize a React Application"
 description : "A Step by Step Tutorial to Dockerize React Application"
 tags : ["Docker", "ReactJS"]
 tableOfContents : true
+type: "post"
 ---
 
 ## Create a Simple React Application
