@@ -1,5 +1,5 @@
 ---
-title: "ReactJS Props Destructuring"
+title: "React Props Destructuring"
 date: 2023-12-30T07:41:05+01:00
 type: "post"
 draft: false 

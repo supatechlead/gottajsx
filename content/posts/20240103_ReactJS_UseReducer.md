@@ -1,5 +1,5 @@
 ---
-title: "ReactJS useReducer Hook"
+title: "React useReducer Hook"
 date: 2024-01-03T07:41:05+01:00
 type: "post"
 draft: false 

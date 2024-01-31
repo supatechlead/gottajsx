@@ -1,5 +1,5 @@
 ---
-title: "ReactJS Props vs State"
+title: "React Props vs State"
 date: 2024-01-02T07:41:05+01:00
 type: "post"
 draft: false 

@@ -1,5 +1,5 @@
 ---
-title: "ReactJS Functional Components and Props"
+title: "React Functional Components and Props"
 date: 2023-12-29T07:41:05+01:00
 type: "post"
 draft: false 

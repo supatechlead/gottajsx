@@ -1,5 +1,5 @@
 ---
-title: "ReactJS Props Advanced Concepts"
+title: "React Props Advanced Concepts"
 date: 2023-12-31T07:41:05+01:00
 type: "post"
 draft: false 

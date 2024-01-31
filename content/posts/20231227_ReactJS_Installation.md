@@ -1,5 +1,5 @@
 ---
-title: "ReactJS Installation"
+title: "React Installation"
 date: 2023-12-27T17:41:05+01:00
 type: "post"
 draft: false 

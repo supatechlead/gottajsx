@@ -1,5 +1,5 @@
 ---
-title: "ReactJS State"
+title: "React State"
 date: 2024-01-01T07:41:05+01:00
 type: "post"
 draft: false 
