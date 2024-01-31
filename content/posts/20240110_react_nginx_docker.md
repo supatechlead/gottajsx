@@ -1,16 +1,11 @@
-+++ 
-draft = false
-date = 2024-01-10T14:37:18+01:00
-title = "Dockerize React apps with Nginx - 1st Method"
-description = "Create a Minimal Containerization for React and Nginx"
-slug = ""
-authors = []
-tags = ["Docker", "React", "Nginx"]
-categories = []
-externalLink = ""
-series = []
-tableOfContents = true
-+++
+--- 
+draft : false
+date : 2024-01-10T14:37:18+01:00
+title : "Dockerize React apps with Nginx - 1st Method"
+description : "Create a Minimal Containerization for React and Nginx"
+tags : ["Docker", "React", "Nginx"]
+tableOfContents : true
+---
 
 Dockerizing a React application with Nginx is a common practice for deploying web applications in a containerized environment. Here is a first step-by-step guide on how to Dockerize a React application with Nginx.
 

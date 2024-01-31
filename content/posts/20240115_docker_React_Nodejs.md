@@ -1,16 +1,11 @@
-+++ 
-draft = false
-date = 2024-01-15T14:37:18+01:00
-title = "ReactJS NodeJS Express inside Docker"
-description = "Dockerize NodeJS Backend Server with React Frontend"
-slug = ""
-authors = []
-tags = ["Docker", "React", "Node", "Express"]
-categories = []
-externalLink = ""
-series = []
-tableOfContents = true
-+++
+--- 
+draft : false
+date : 2024-01-15T14:37:18+01:00
+title : "ReactJS NodeJS Express inside Docker"
+description : "Dockerize NodeJS Backend Server with React Frontend"
+tags : ["Docker", "React", "Node", "Express"]
+tableOfContents : true
+---
 
 In this tutorial we will learn how to create and run a NodeJS Express backend and a React frontend inside of a Docker container.
 

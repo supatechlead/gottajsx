@@ -1,16 +1,11 @@
-+++ 
-draft = false
-date = 2024-01-14T14:37:18+01:00
-title = "MySQL in Docker in More Advanded Ways"
-description = "More Advanced MySQL inside a Docker Container"
-slug = ""
-authors = []
-tags = ["Docker", "MySQL"]
-categories = []
-externalLink = ""
-series = []
-tableOfContents = true
-+++
+--- 
+draft : false
+date : 2024-01-14T14:37:18+01:00
+title : "MySQL in Docker in More Advanded Ways"
+description : "More Advanced MySQL inside a Docker Container"
+tags : ["Docker", "MySQL"]
+tableOfContents : true
+---
 
 Docker is among the more popular platforms for developing and deploying containerized applications. This article explains how to Dockerize MySQL for isolated database environments. 
 

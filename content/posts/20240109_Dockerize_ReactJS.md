@@ -1,16 +1,11 @@
-+++ 
-draft = false
-date = 2024-01-09T14:37:18+01:00
-title = "Dockerize a React Application"
-description = "A Step by Step Tutorial to Dockerize React Application"
-slug = ""
-authors = []
-tags = ["Docker", "ReactJS"]
-categories = []
-externalLink = ""
-series = []
-tableOfContents = true
-+++
+--- 
+draft : false
+date : 2024-01-09T14:37:18+01:00
+title : "Dockerize a React Application"
+description : "A Step by Step Tutorial to Dockerize React Application"
+tags : ["Docker", "ReactJS"]
+tableOfContents : true
+---
 
 ## Create a Simple React Application
 

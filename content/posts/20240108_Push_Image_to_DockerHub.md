@@ -1,15 +1,10 @@
 --- 
-draft = false
-date = 2024-01-08T14:37:18+01:00
-title = "Push a Docker Image to DockerHub"
-description = "A Guide for Pushing Docker Image to DockerHub"
-slug = ""
-authors = []
-tags = ["DockerHub"]
-categories = []
-externalLink = ""
-series = []
-tableOfContents = true
+draft : false
+date : 2024-01-08T14:37:18+01:00
+title : "Push a Docker Image to DockerHub"
+description : "A Guide for Pushing Docker Image to DockerHub"
+tags : ["DockerHub"]
+tableOfContents : true
 ---
 
 ## Create a Repository on DockerHub
