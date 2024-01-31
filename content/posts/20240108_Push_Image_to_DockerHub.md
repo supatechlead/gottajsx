@@ -1,4 +1,4 @@
-+++ 
+--- 
 draft = false
 date = 2024-01-08T14:37:18+01:00
 title = "Push a Docker Image to DockerHub"
@@ -10,7 +10,7 @@ categories = []
 externalLink = ""
 series = []
 tableOfContents = true
-+++
+---
 
 ## Create a Repository on DockerHub
 Before we can push an image to Docker Hub, we will first need an account on Docker Hub. The signup process is simple and available on the front page of Docker Hub.
