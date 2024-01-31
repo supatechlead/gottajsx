@@ -1,7 +1,7 @@
 --- 
 draft : false
 date : 2024-01-11T14:37:18+01:00
-title : "Dockerize React apps with Nginx - 2nd Method"
+title : "Dockerize React Apps with Nginx - 2nd Method"
 description : "Create a Minimal Containerization for React and Nginx"
 tags : ["Docker", "React", "Nginx"]
 tableOfContents : true
