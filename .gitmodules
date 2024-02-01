@@ -1,3 +1,3 @@
 [submodule "themes/gokarna-fork"]
 	path = themes/gokarna-fork
-	url = https://github.com/supatechlead/gokarna-fork
+	url = git@github.com:supatechlead/gokarna-fork
