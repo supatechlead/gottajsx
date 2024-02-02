@@ -36,16 +36,16 @@ pygmentsStyle = "monokai"
       });
     </script>
   """
-  socialIcons = [
-    {name = "twitter", url = "#"},
-    {name = "linkedin", url = "#"},
-    {name = "stackoverflow", url = "#"},
-    {name = "dribbble", url = "#"},
-    {name = "instagram", url = "#"},
-    {name = "twitch", url = "#"},
-    {name = "email", url = "#"}
-  ]
-  metaKeywords = ["blog", "gokarna", "hugo"]
+#  socialIcons = [
+#    {name = "twitter", url = "#"},
+#    {name = "linkedin", url = "#"},
+#    {name = "stackoverflow", url = "#"},
+#    {name = "dribbble", url = "#"},
+#    {name = "instagram", url = "#"},
+#    {name = "twitch", url = "#"},
+#    {name = "email", url = "#"}
+#  ]
+  metaKeywords = ["blog", "gokarna", "hugo", "flask", "react"]
 
 [menus]
   [[menus.main]]
@@ -72,23 +72,23 @@ pygmentsStyle = "monokai"
     url = "/tags/"
     weight = 4
 
-  [[menus.main]]
-    identifier = "github"
-    pre = "<span data-feather='github'></span>"
-    url = "https://github.com/526avijitgupta/gokarna"
-    weight = 5
+#  [[menus.main]]
+#    identifier = "github"
+#    pre = "<span data-feather='github'></span>"
+#    url = "https://github.com/526avijitgupta/gokarna"
+#    weight = 5
 
-  [[menus.main]]
-    identifier = "buymeacoffee"
-    pre = "<span data-feather='coffee'></span>"
-    url = "https://www.buymeacoffee.com/avijitgupta"
-    weight = 6
+#  [[menus.main]]
+#    identifier = "buymeacoffee"
+#    pre = "<span data-feather='coffee'></span>"
+#    url = "https://www.buymeacoffee.com/avijitgupta"
+#    weight = 6
 
-  [[menus.main]]
-    identifier = "rss"
-    pre = "<span data-feather='rss'></span>"
-    url = "/index.xml"
-    weight = 7
+#  [[menus.main]]
+#    identifier = "rss"
+#    pre = "<span data-feather='rss'></span>"
+#    url = "/index.xml"
+#    weight = 7
     
   [menus.main.params]
       NewPage = true
