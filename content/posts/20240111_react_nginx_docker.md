@@ -4,7 +4,7 @@ date : 2024-01-11T14:37:18+01:00
 title : "Dockerize React with Nginx - Second Method"
 description : "Create a Minimal Containerization for React and Nginx"
 tags : ["Docker", "Nginx"]
-tableOfContents : true
+showTableOfContents : true
 type: "post"
 ---
 

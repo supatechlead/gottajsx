@@ -4,7 +4,7 @@ date : 2024-01-15T14:37:18+01:00
 title : "ReactJS NodeJS Express inside Docker"
 description : "Dockerize NodeJS Backend Server with React Frontend"
 tags : ["Docker", "Node"]
-tableOfContents : true
+showTableOfContents : true
 type: "post"
 ---
 

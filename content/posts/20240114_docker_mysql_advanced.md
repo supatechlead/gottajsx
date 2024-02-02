@@ -4,7 +4,7 @@ date : 2024-01-14T14:37:18+01:00
 title : "MySQL in Docker in More Advanded Ways"
 description : "More Advanced MySQL inside a Docker Container"
 tags : ["Docker", "MySQL"]
-tableOfContents : true
+showTableOfContents : true
 type: "post"
 ---
 

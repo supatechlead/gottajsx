@@ -3,8 +3,8 @@ draft : false
 date : 2024-01-31T14:37:18+01:00
 title : "Generate SSH Keys for Github"
 description : "Short Reminder for Github SSH Keys Generation"
-tags : ["Github"]
-tableOfContents : true
+tags : ["Github", "ssh"]
+showTableOfContents : true
 type: "post"
 ---
 

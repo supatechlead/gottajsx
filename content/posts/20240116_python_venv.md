@@ -4,7 +4,7 @@ date: 2024-01-16T07:41:05+01:00
 type: "post"
 draft: false 
 description: "How to Simply Use Venv Virtual Environment Manager"
-showTableOfContents: true
+showTableOfContents : true
 tags: ["Python"]
 ---
 
