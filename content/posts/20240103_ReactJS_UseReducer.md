@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "Introduction to useReducer Hook for State Management"
 showTableOfContents: true
-tags: ["ReactJS", "State", "UseReducer"]
+tags: ["React", "Reducer"]
 ---
 
 React's `useReducer` hook derives from the concept of a JavaScript Reducer. A reducer is a function that takes as input parameters the current state and an action containing a payload, then returns a new computed state.

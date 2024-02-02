@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "A simple and Modern State Management for React"
 showTableOfContents: true
-tags: ["ReactJS", "State", "Zustand"]
+tags: ["React", "State"]
 ---
 
 Zustand is a fast and scalable state management. Zustand is known for its simplicity, using hooks to manage states without boilerplate code.

@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "How to Use useReducer and useState Together"
 showTableOfContents: true
-tags: ["ReactJS", "State", "useReducer", "useState"]
+tags: ["React", "State"]
 ---
 
 Combining useState and useReducer in a single React component is a common practice. This combination allows you to handle different aspects of your component's state with appropriate tools. Here's an example:

@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "Short Introduction to JavaScript Functions being React Components"
 showTableOfContents: true
-tags: ["ReactJS", "Function Component", "Props", "Import", "Export"]
+tags: ["React", "Props"]
 ---
 In the past, there have been various React Component Types, but with the introduction of React Hooks it's possible to write your entire application with just functions as React components.
 

@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "How to Use useContext Hook and Combine it with useReducer"
 showTableOfContents: true
-tags: ["ReactJS", "State", "useContext", "useReducer"]
+tags: ["React", "State"]
 ---
 
 React's `useContext` hook isn't related to state. It makes it just more convenient to pass props down the component tree. Normally React props are passed from parent to child components; however, React's Context API allows it to tunnel React components in between. Thus it's possible to pass props from a grandfather component to a grandchild component without bothering the other React components in between of the chain

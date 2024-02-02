@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "Description of Differences Between ReactJS State and Props"
 showTableOfContents: true
-tags: ["ReactJS", "State", "Props", "Pass Props to Parent"]
+tags: ["React", "State", "Props"]
 ---
 
 In React, both state and props are mechanisms for managing data in a component, but they serve different purposes and have some key differences:

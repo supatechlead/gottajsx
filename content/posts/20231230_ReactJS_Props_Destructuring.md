@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "How to Destructure Props"
 showTableOfContents: true
-tags: ["ReactJS", "Props", "Destructuring", "Spread Operator", "Rest Operator"]
+tags: ["React", "Props"]
 ---
 But destructuring is really a simple concept that can make code more readable and clear, especially when passing down props in React.
 

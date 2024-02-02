@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "Introduction to React Redux"
 showTableOfContents: true
-tags: ["ReactJS", "State", "Redux"]
+tags: ["React", "Redux"]
 ---
 
 Redux is a state management library that can be used with any UI layer, but it is commonly associated with React. It provides a predictable state container, making it easier to manage and manipulate the state of your application. The state in Redux is stored in a single JavaScript object called the "store."

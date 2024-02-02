@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "Introduction to Some Advanced Props Concepts"
 showTableOfContents: true
-tags: ["ReactJS", "Props", "Advanced"]
+tags: ["React", "Props"]
 ---
 Following post will introduce advanced ReactJS props concepts.
 

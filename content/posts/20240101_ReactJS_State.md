@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "Short Introduction to ReactJS Function Component State"
 showTableOfContents: true
-tags: ["ReactJS", "State"]
+tags: ["React", "State"]
 ---
 The UI of a frontend application is a representation of its state. State is just a snapshot in time. If a user changes state by interacting with your application, the UI may look completely different afterward, because it's represented by this new state rather than the old state.
 

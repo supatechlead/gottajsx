@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "Guide for ReactJS installation on Ubuntu Linux"
 showTableOfContents: true
-tags: ["Installation", "ReactJS", "Ubuntu"]
+tags: ["React"]
 ---
 Developed by Facebook in 2011, React (also referred to as ReactJS) is a Javascript library used for creating fast and interactive user interfaces. At the time of writing, it’s the most popular Javascript library for developing user interfaces.
 

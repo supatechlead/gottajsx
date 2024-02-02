@@ -3,7 +3,7 @@ draft : false
 date : 2024-01-15T14:37:18+01:00
 title : "ReactJS NodeJS Express inside Docker"
 description : "Dockerize NodeJS Backend Server with React Frontend"
-tags : ["Docker", "React", "Node", "Express"]
+tags : ["Docker", "Node"]
 tableOfContents : true
 type: "post"
 ---

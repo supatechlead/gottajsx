@@ -5,7 +5,7 @@ type: "post"
 draft: false 
 description: "How to Simply Use Venv Virtual Environment Manager"
 showTableOfContents: true
-tags: ["venv"]
+tags: ["Python"]
 ---
 
 `Venv` stands for "virtual environment," and it is a built-in module in Python for creating isolated Python environments. 
