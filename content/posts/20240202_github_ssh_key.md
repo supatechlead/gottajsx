@@ -41,7 +41,7 @@ Enter passphrase (empty for no passphrase): [Type a passphrase]
 Enter same passphrase again: [Type passphrase again]
 ```
 
-## Adding your SSH key to the ssh-agent
+## Adding your SSH Key to the ssh-agent
 
 Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key.
 
