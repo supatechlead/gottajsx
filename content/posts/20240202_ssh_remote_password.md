@@ -3,14 +3,16 @@ draft : false
 date : 2024-02-01T14:37:18+01:00
 title : "SSH Remote Password"
 description : "How to SSH to a Remote server Without Typing your Password"
-tags : ["Github", "ssh"]
+tags : ["ssh"]
 showTableOfContents : true
 type: "post"
 ---
 
 Follow the steps below:
 
-1. Run this Bash script on your laptop:
+## First Step
+
+Run this Bash script on your laptop:
 ```bash
 #!/usr/bin/env bash
 
@@ -37,7 +39,9 @@ At this point, you can connect to your server without typing a password:
 ssh username@myserver.com
 ```
 
-2. If you would prefer to type `jupiter` (7 characters) rather than `username@myserver.com` (21 characters), create a config file `~/.ssh/config` on your laptop, as shown below. You'll be able to use the `jupiter` alias with: `rsync`, `scp`, and `ssh`.
+## Alias Server
+
+If you would prefer to type `jupiter` (7 characters) rather than `username@myserver.com` (21 characters), create a config file `~/.ssh/config` on your laptop, as shown below. You'll be able to use the `jupiter` alias with: `rsync`, `scp`, and `ssh`.
 ```bash
 # ~/.ssh/config
 
@@ -51,7 +55,9 @@ At this point, you can connect to your server like this:
 ssh jupiter
 ```
 
-3. If you want a single command to do two steps:
+## Alias Commands
+
+If you want a single command to do two steps:
 * First, connect to a login server jupiter
 * Next, connect to a work server saturn
 
