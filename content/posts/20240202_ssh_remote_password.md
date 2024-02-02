@@ -8,7 +8,7 @@ showTableOfContents : true
 type: "post"
 ---
 
-Follow the steps below:
+SSH to remote server can be a little tedious if password is required at each steap. Follow the steps below to SSH without enter the password:
 
 ## First Step
 
