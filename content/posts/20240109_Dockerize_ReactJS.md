@@ -84,3 +84,36 @@ docker run -dp 8000:3000 --name react-example-container react-docker-example:lat
 Now, run `docker ps` or `docker container ps` to show a list of all the running containers.
 
 Now, open your browser and go to http://localhost:8000. You'll be able to access your application.
+
+## Create a Docker Compose File
+
+Docker Compose is a tool for defining and running multi-container applications. It is the key to unlocking a streamlined and efficient development and deployment experience.
+
+Compose simplifies the control of your entire application stack, making it easy to manage services, networks, and volumes in a single, comprehensible YAML configuration file. Then, with a single command, you create and start all the services from your configuration file.
+
+Compose works in all environments; production, staging, development, testing, as well as CI workflows. It also has commands for managing the whole lifecycle of your application:
+
+* Start, stop, and rebuild services
+* View the status of running services
+* Stream the log output of running services
+* Run a one-off command on a service
+
+Let’s add our react project to the docker-compose.yml file as a service.
+
+```
+version: "3.8"
+
+services:
+    app:
+        container_name: docker-react
+        image: docker-react
+        build:
+            context: .
+        ports:
+          - "3000:3000"
+```
+
+Run the `docker-compose up` command to start the container. The React development server will be running inside the container and will be watching the `src` folder.
+```bash
+docker-compose up
+```
