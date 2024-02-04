@@ -1,6 +1,6 @@
 --- 
 draft : false
-date : 2024-03-01T14:37:18+01:00
+date : 2024-02-03T14:37:18+01:00
 title : "Create a Local Appwrite Instance"
 description : "This tutorial explains how to package Appwrite inside a Docker instance"
 tags : ["Docker", "Appwrite"]
