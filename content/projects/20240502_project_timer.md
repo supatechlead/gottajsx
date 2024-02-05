@@ -1,0 +1,96 @@
+--- 
+draft : false
+date : 2024-01-08T14:37:18+01:00
+title : "Timer Project"
+description : "A Simple Timer Component With Button Outside"
+showTableOfContents : true
+type: "post"
+---
+
+## Goal
+
+The goal of this project is to create a component that can start and stop a timer in another component 
+
+## Layout
+
+For layout, we want the screen be split in upper and lower part.
+
+> App.js
+```jsx
+function App() {
+  return (
+    <div style={{ margin: 0, height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ flex: 1, borderBottom: "5px solid #ccc", padding: "10px" }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+          UPPER PART
+        </div>
+      </div>
+
+      <div style={{ flex: 1, padding: "10px" }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+          LOWER PART
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Timer Component
+
+To create a timer that increments by 1 every second in a React component, you can use the `useState` hook to manage the state of the timer value and the `useEffect` hook to update the timer at a regular interval. Here's how:
+
+> Timer.js
+```jsx
+import React, { useState, useEffect } from 'react';
+
+const Timer = () => {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    // Function to increment the timer every second
+    const intervalId = setInterval(() => {
+      setSeconds((prevSeconds) => prevSeconds + 1);
+    }, 1000);
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures the effect runs only once (on mount)
+
+  return (
+    <div>
+      <h1>Timer: {seconds} seconds</h1>
+    </div>
+  );
+};
+
+export default Timer;
+```
+In upper code:
+* The `useState` hook is used to create a `seconds` state variable with an initial value of 0.
+* The `useEffect` hook is used to set up an interval that increments the timer every second using `setSeconds`.
+* The `clearInterval` function is used in the cleanup function of `useEffect` to clear the interval when the component is unmounted.
+
+## RunningToggle Component
+
+A component owning a single button must be create to switch timer from running or not running state:
+> runningToggle.js
+```jsx
+import { useState } from 'react';
+
+
+function RunningToggle() {
+  const [isRunning, setIsRunning] = useState(true)
+
+  const handleToggle = () => {
+      setIsRunning((prevIsRunning)=>!prevIsRunning)
+  }
+  return (
+        <button onClick={handleToggle}>{isRunning ? 'Stop' : 'Start'}</button>
+  );
+}
+
+export default RunningToggle;
+```
