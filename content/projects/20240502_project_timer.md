@@ -94,3 +94,188 @@ function RunningToggle() {
 
 export default RunningToggle;
 ```
+
+## App.js Update
+
+Now that we own both `RunningToggle` and `Timer` modules, we can insert it inside `App.js`
+> App.js
+```jsx
+function App() {
+  return (
+    <div style={{ margin: 0, height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ flex: 1, borderBottom: "5px solid #ccc", padding: "10px" }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+          <RunningToggle />
+        </div>
+      </div>
+
+      <div style={{ flex: 1, padding: "10px" }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+          <Timer />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Using Context
+
+### Using Context Inside App.js
+
+we must create a `RunningContext` context inside `App.js` and export it:
+```javascript
+export const RunningContext = createContext({
+  isRunning: false,
+  setIsRunning: () => {},
+})
+```
+
+Then, we define `isRunning` and `setIsRunning` inside `App` function in order to use them as context provider values:
+```jsx
+function App() {
+
+  const [isRunning, setIsRunning] = useState(false);
+
+  return (
+    <RunningContext.Provider value={{isRunning, setIsRunning}}>
+      <div style={{ margin: 0, height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ flex: 1, borderBottom: "5px solid #ccc", padding: "10px" }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+            <RunningToggle />
+          </div>
+        </div>
+
+        <div style={{ flex: 1, padding: "10px" }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+            <Timer />
+          </div>
+        </div>
+      </div>
+    </RunningContext.Provider>
+  );
+}
+```
+### Using Context Inside Timer Component
+
+We can modify `Timer` component for using the previously defined `RunningContext` context as:
+```jsx`
+import React, { useState, useEffect, useContext } from 'react';
+import { RunningContext } from './App';
+
+const Timer = () => {
+    const { isRunning } = useContext(RunningContext);
+    const [seconds, setSeconds] = useState(0);
+
+    useEffect(() => {
+        let intervalId
+
+        if(isRunning) {
+            intervalId = setInterval(() => {
+                setSeconds((prevSeconds) => prevSeconds + 1);
+            }, 1000);
+        }
+
+        return () => clearInterval(intervalId);
+    }, [isRunning]);
+
+    return (
+        <h1>Timer: {seconds} seconds</h1>
+    );
+};
+
+export default Timer;
+```
+
+### Using Context Inside RunningToggleComponent
+
+The same way, can can modify `RunningToggle` component
+```jsx
+import { useContext } from 'react';
+import { RunningContext } from './App';
+
+const RunningToggle = () => {
+  const { isRunning, setIsRunning } = useContext(RunningContext)
+
+  const handleToggle = () => {
+      setIsRunning((prevIsRunning)=>!prevIsRunning)
+  }
+  return (
+        <button onClick={handleToggle}>{isRunning ? 'Stop' : 'Start'}</button>
+  );
+}
+
+export default RunningToggle;
+```
+
+## Alternative Writing
+
+As alternative way, of creating a context, we could create a provider component that will wrap the application and create a custom hook to consume the context:
+```jsx
+import React, { createContext, useState, useContext } from 'react';
+
+// Create a context with an initial value for isRunning and setIsRunning
+const RunningContext = createContext({
+  isRunning: true,
+  setIsRunning: () => {},
+});
+
+// Create a provider component that will wrap your application
+export const RunningProvider = ({ children }) => {
+  const [isRunning, setIsRunning] = useState(true);
+
+  return (
+    <RunningContext.Provider value={{ isRunning, setIsRunning }}>
+      {children}
+    </RunningContext.Provider>
+  );
+};
+
+// Create a custom hook to consume the context
+export const useRunning = () => {
+  const context = useContext(RunningContext);
+
+  if (!context) {
+    throw new Error('useRunning must be used within a RunningProvider');
+  }
+
+  return context;
+};
+```
+Now we can use the `RunningProvider` component at the top level of the application and use the `useRunning` hook in any component that needs access to the `isRunning` state and `setIsRunning` function.
+
+Example usage:
+
+```jsx
+import React from 'react';
+import { RunningProvider, useRunning } from './RunningContext';
+
+const App = () => {
+  return (
+    <RunningProvider>
+      <ChildComponent />
+    </RunningProvider>
+  );
+};
+
+const ChildComponent = () => {
+  const { isRunning, setIsRunning } = useRunning();
+
+  // Use isRunning and setIsRunning in your component
+  // ...
+
+  return (
+    <div>
+      <p>isRunning: {isRunning.toString()}</p>
+      <button onClick={() => setIsRunning(!isRunning)}>
+        Toggle isRunning
+      </button>
+    </div>
+  );
+};
+
+export default App;
+```
+
