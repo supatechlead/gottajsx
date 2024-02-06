@@ -161,7 +161,7 @@ function App() {
 ### Using Context Inside Timer Component
 
 We can modify `Timer` component for using the previously defined `RunningContext` context as:
-```jsx`
+```jsx
 import React, { useState, useEffect, useContext } from 'react';
 import { RunningContext } from './App';
 
@@ -278,4 +278,9 @@ const ChildComponent = () => {
 
 export default App;
 ```
+## Github Link
+
+We can refer to this project following the link: [github.com/supatechlead/react-timer](https://github.com/supatechlead/react-timer)
+
+
 
