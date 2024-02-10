@@ -2,7 +2,7 @@
 draft : false
 date : 2024-02-10T14:37:18+01:00
 title : "Using React useMemo Hook "
-description : "Understanding the React useMemo Hook""
+description : "Understanding the React useMemo Hook"
 tags : ["React", "Hook"]
 showTableOfContents : true
 type: "post"
