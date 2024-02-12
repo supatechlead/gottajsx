@@ -98,3 +98,6 @@ pygmentsStyle = "monokai"
     startLevel = 1
     endLevel = 4
     ordered = false
+
+[markup.goldmark.renderer]
+  unsafe = true
