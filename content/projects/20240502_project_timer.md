@@ -1,7 +1,7 @@
 --- 
 draft : false
 date : 2024-01-08T14:37:18+01:00
-title : "Timer Project"
+title : "React Timer Component with Button Outside"
 description : "A Simple Timer Component With Button Outside"
 showTableOfContents : true
 type: "post"

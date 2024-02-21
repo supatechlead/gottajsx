@@ -2,7 +2,6 @@
 draft : false
 date : 2024-02-13T14:37:18+01:00
 title : "Specify a Port for React Project"
-description : "How to Specify a Particular Port for Running a React App"
 tags : ["React"]
 showTableOfContents : true
 type: "post"
