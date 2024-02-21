@@ -1,6 +1,6 @@
 --- 
 draft : false
-date : 2024-02-14T14:37:18+01:00
+date : 2024-02-16T14:37:18+01:00
 title : "How to Embed HTML inside Hugo Article"
 tags : ["Hugo"]
 showTableOfContents : true
