@@ -12,10 +12,10 @@ I often need to embed diagrams into documentation but I dislike having to keep t
 I spun up a Hugo Shortcode to add [support](https://gohugo.io/templates/shortcode-templates/) for `{{< plantuml >}} ... {{< /plantuml >}}` in pages where the source for the diagram is in the middle.
 
 Stick this in a Hugo Markdown page…
-```plantuml
-{{< plantuml id="eg" >}}
+```
+{{{\< plantuml id="eg" >}}}
 Alice -> Bob: test
-{{< /plantuml >}}
+{{{\< /plantuml >}}}
 ```
 ... and it becomes this when rendered:
 <center>
