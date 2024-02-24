@@ -9,13 +9,14 @@ type: "post"
 
 I often need to embed diagrams into documentation but I dislike having to keep track of separate files for the image. I went looking for a way to embed them as “code” in the document and found GitLab’s ability to embed PlantUML in Markdown content including READMEs, issues, MRs, etc. I want to be able to do the same with Hugo.
 
-I spun up a Hugo Shortcode to add [support](https://gohugo.io/templates/shortcode-templates/) for `{{< plantuml >}} ... {{< /plantuml >}}` in pages where the source for the diagram is in the middle.
+I spun up a Hugo Shortcode to add [support](https://gohugo.io/templates/shortcode-templates/) for `\{{< plantuml >}} ... \{{< /plantuml >}}` in pages where the source for the diagram is in the middle.
 
 Stick this in a Hugo Markdown page…
+```plantuml
 \{{< plantuml id="eg" >}}
 Alice -> Bob: test
 \{{< /plantuml >}}
-`
+```
 
 ... and it becomes this when rendered:
 
@@ -23,7 +24,7 @@ Alice -> Bob: test
 {{< plantuml id="eg" >}}
 Alice -> Bob: test
 {{< /plantuml >}}
-<center>
+</center>
 
 The source for the shortcode is below. I also put a copy of `rawdeflate.js` from [here](https://github.com/johan/js-deflate) in `static/js/rawdeflate.js`. 
 
