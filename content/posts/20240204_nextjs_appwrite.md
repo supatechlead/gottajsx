@@ -3,7 +3,7 @@ draft : false
 date : 2024-02-04T14:37:18+01:00
 title : "Start Appwrite with NextJS"
 description : "Setup Your First NextJS/AppWrite Project"
-tags : ["Docker"]
+tags : ["Appwrite", "Nextjs"]
 showTableOfContents : true
 type: "post"
 ---
