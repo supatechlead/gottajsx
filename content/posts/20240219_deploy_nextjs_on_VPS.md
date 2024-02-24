@@ -1,6 +1,6 @@
 --- 
 draft : false
-date : 2024-02-16T14:37:18+01:00
+date : 2024-02-19T14:37:18+01:00
 title : "How to Deploy a Next.js app to a Custom Server"
 tags : ["plantuml","Hugo"]
 showTableOfContents : true
