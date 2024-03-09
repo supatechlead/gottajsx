@@ -47,7 +47,7 @@ console.log(myRefValue); // <div>This is an example element</div>
 ```
 
 
-##DOM Manipulation with the useRef Hook
+## DOM Manipulation with the useRef Hook
 
 DOM manipulation is a common task in web development, as it allows you to dynamically modify and update the content, structure, and appearance of a web page.
 
