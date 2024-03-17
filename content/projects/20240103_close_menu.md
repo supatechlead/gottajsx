@@ -1,11 +1,10 @@
 --- 
 draft : false
 date : 2024-03-04T14:37:18+01:00
-title : "Closing the Context Menu on Outside Click Using ReactJS:"
+title : "Closing Menu by Outside Clicking Using ReactJS"
 showTableOfContents : true
 type: "post"
 ---
-
 
 Here's how to achieve the functionality of closing the context menu on outside click using ReactJS:
 
