@@ -2,7 +2,7 @@
 draft : false
 date : 2024-03-09T14:37:18+01:00
 title : "How do I use Node.js to Create a Job Queue?"
-tags : ["Nodejs", "react", "nextjs"]
+tags : ["Nodejs"]
 showTableOfContents : true
 type: "post"
 ---
