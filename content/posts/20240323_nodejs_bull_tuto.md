@@ -1,6 +1,6 @@
 --- 
 draft : false
-date : 2024-03-09T14:37:18+01:00
+date : 2024-03-12T14:37:18+01:00
 title : "Node.js Bull Tutorial – NPM Package for Queues"
 tags : ["Nodejs"]
 showTableOfContents : true
