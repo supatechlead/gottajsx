@@ -95,3 +95,218 @@ By clicking the Allow a window will come up with your device camera capturing yo
 
 ![image2.webp](/images/2024mars18_2.webp)
 
+## React-webcam Props
+
+You can use a variety of props from the `react-webcam` component in your application. We’ll discuss a couple of them below:
+
+### ScreenshotFormat
+
+The screenshot format prop has a string type and the value image/webp by default.
+
+```jsx
+<Webcam screenshotFormat='image/webp' />
+```
+
+This gives the type of format to save our screenshots.
+
+### VideoConstraints
+
+A sort of object called `videoConstraints` is responsible for managing a video’s “width,” “height,” “aspect ratio,” and “facing mode” attributes. The aspect ratio parameter can flip the camera from portrait to landscape orientation.
+
+```jsx
+const videoConstraints = {
+aspectRatio: 0.6666666667,
+  facingMode: "user",
+  width: { min: 480 },
+  height: { min: 720 },
+ };
+
+...
+<Webcam width={480} height={720} videoConstraints={videoConstraints} />
+```
+![image3.webp](/images/2024mars18_3.webp)
+
+### Mirrored
+
+The webcam’s output is mirrored when the `mirrored` prop, a boolean with a default value of `false`, is used.
+
+```jsx
+<Webcam mirrored={false} />
+```
+![image4.webp](/images/2024mars18_4.webp)
+
+Likewise, when the `mirrored` prop was set to `true`.
+```jsx
+<Webcam mirrored={true} />
+```
+![image5.webp](/images/2024mars18_5.webp)
+
+### Audio
+
+The boolean `audio` prop has the default value of `false`. The microphone on the computer is managed by this.
+```jsx
+<Webcam audio={true} />
+```
+We will get a prompt asking us to provide access to the computer’s microphone after adding the `audio` prop and changing it to true on the camera component.
+
+![image6.webp](/images/2024mars18_6.webp)
+
+## Image Capturing
+
+In this section, we’ll increase the webcam’s functionality by fusing two or more accessories so that the program can take a live photo. The current webcam image will be returned as a base64-encoded string by the getScreenshot method, which we will use.
+
+The following step is to create a `WebcamImage.js` component, then paste the next code block there:
+```jsx
+import Webcam from "react-webcam";
+import React, { useState, useRef, useCallback } from "react";
+
+function WebcamImage() {
+  const webcamRef = useRef(null);
+  const [img, setImg] = useState(null);
+
+const capture = useCallback(() => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    setImg(imageSrc);
+  }, [webcamRef]);
+
+  const videoConstraints = {
+    width: 390,
+    height: 390,
+    facingMode: "user",
+  };
+
+  return (
+    <div className="Container">
+      {img === null ? (
+        <>
+          <Webcam
+            screenshotFormat="image/jpeg"
+            videoConstraints={videoConstraints}
+            audio={false}
+            height={500}
+            width={500}
+            ref={webcamRef}
+            mirrored={true}
+          />
+          <button onClick={capture}>Capture photo</button>
+        </>
+      ) : (
+        <>
+          <img src={img} alt="screenshot" />
+          <button onClick={() => setImg(null)}>Recapture</button>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default WebcamImage;
+```
+
+Next, we add the following code block to `App.js` to make changes:
+```jsx
+import "./App.css";
+import WebcamImage from "./WebcamImage";
+
+function App() {
+  return (
+    <div className="App">
+      <WebcamImage />
+    </div>
+  );
+}
+
+export default App;
+```
+![image7.webp](/images/2024mars18_7.webp)
+
+## Video Capturing
+
+The capability of the `react-webcam` will be expanded in this section by recording a live video and saving it to your PC.
+
+The following step is to create a `WebcamVideo.js` component and paste the following code block:
+```jsx
+const WebcamStreamCapture = () => {
+  const webcamRef = React.useRef(null);
+  const mediaRecorderRef = React.useRef(null);
+  const [capturing, setCapturing] = React.useState(false);
+  const [recordedChunks, setRecordedChunks] = React.useState([]);
+
+  const handleStartCaptureClick = React.useCallback(() => {
+    setCapturing(true);
+    mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
+      mimeType: "video/webm"
+    });
+    mediaRecorderRef.current.addEventListener(
+      "dataavailable",
+      handleDataAvailable
+    );
+    mediaRecorderRef.current.start();
+  }, [webcamRef, setCapturing, mediaRecorderRef]);
+
+  const handleDataAvailable = React.useCallback(
+    ({ data }) => {
+      if (data.size > 0) {
+        setRecordedChunks((prev) => prev.concat(data));
+      }
+    },
+    [setRecordedChunks]
+  );
+
+  const handleStopCaptureClick = React.useCallback(() => {
+    mediaRecorderRef.current.stop();
+    setCapturing(false);
+  }, [mediaRecorderRef, webcamRef, setCapturing]);
+
+  const handleDownload = React.useCallback(() => {
+    if (recordedChunks.length) {
+      const blob = new Blob(recordedChunks, {
+        type: "video/webm"
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      document.body.appendChild(a);
+      a.style = "display: none";
+      a.href = url;
+      a.download = "react-webcam-stream-capture.webm";
+      a.click();
+      window.URL.revokeObjectURL(url);
+      setRecordedChunks([]);
+    }
+  }, [recordedChunks]);
+
+  return (
+    <>
+      <Webcam audio={false} ref={webcamRef} />
+      {capturing ? (
+        <button onClick={handleStopCaptureClick}>Stop Capture</button>
+      ) : (
+        <button onClick={handleStartCaptureClick}>Start Capture</button>
+      )}
+      {recordedChunks.length > 0 && (
+        <button onClick={handleDownload}>Download</button>
+      )}
+    </>
+  );
+};
+```
+After that, we edit `App.js` by pasting the following code block:
+```jsx
+import "./App.css";
+import WebcamVideo from "./WebcamVideo";
+
+function App() {
+  return (
+    <div className="App">
+      <WebcamVideo/>
+    </div>
+  );
+}
+
+export default App;
+```
+![image7.gif](/images/2024mars18_7.gif)
+
+Output
+
+![image8.gif](/images/2024mars18_8.gif)
