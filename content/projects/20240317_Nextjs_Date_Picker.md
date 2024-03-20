@@ -135,3 +135,58 @@ In this setup:
 3. The `ParentComponent` holds the state for the selected date and defines the handler function (`handleDateChange`) to update this state. It also displays the selected date.
 
 With this approach, the selected date state is managed in the parent component, allowing you to easily access and manage the selected date across your application.
+
+## TypeScript Version
+
+> ParentComponent.tsx
+```jsx
+import React, { useState } from 'react';
+import MyDatePicker from './MyDatePicker';
+
+const ParentComponent: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null); // Spécifiez explicitement le type Date | null
+
+  const handleDateChange = (date: Date | null) => { // Spécifiez explicitement le type Date | null
+    setSelectedDate(date);
+  };
+
+  return (
+    <div>
+      <h1>Date Picker Example</h1>
+      <MyDatePicker selectedDate={selectedDate} handleDateChange={handleDateChange} />
+      <p>Selected Date: {selectedDate ? selectedDate.toDateString() : 'No date selected'}</p>
+    </div>
+  );
+};
+
+export default ParentComponent;
+```
+
+
+
+> MydatePicker.tsx
+```jsx
+import React from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
+interface MyDatePickerProps {
+  selectedDate: Date | null;
+  handleDateChange: (date: Date | null) => void;
+}
+
+const MyDatePicker: React.FC<MyDatePickerProps> = ({ selectedDate, handleDateChange }) => {
+  return (
+    <div>
+      <DatePicker
+        selected={selectedDate}
+        onChange={handleDateChange}
+        dateFormat="dd/MM/yyyy"
+      />
+    </div>
+  );
+};
+
+export default MyDatePicker;
+```
+
