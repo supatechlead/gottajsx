@@ -1,7 +1,7 @@
 --- 
 draft : false
 date : 2024-03-25T14:37:18+01:00
-title : "create a New Branch From a Particular Commit in Git"
+title : "Create a New Branch From a Particular Commit in Git"
 tags : ["git"]
 showTableOfContents : true
 type: "post"
